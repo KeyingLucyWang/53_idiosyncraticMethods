@@ -70,6 +70,10 @@ public class UserOfList {
         System.out.println( "test mixed list of pi's");
         System.out.println( list);
 	System.out.println(Accumulator.catElementsStartingWith( list, "pi"));
-    //     System.out.println( Accumulator.catElementsStartingWith(list, "pi"));
+
+	//test finites doubles
+	System.out.println( "test finites");
+        System.out.println( list);
+	System.out.println(Accumulator.finites( list));
     }
 }

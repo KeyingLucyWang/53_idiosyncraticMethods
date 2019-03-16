@@ -100,8 +100,16 @@ public class Accumulator {
       @return a list of each of the Double elements
       from the \list whose value is "finite".
      */
-    // public static List_inArraySlots finites(
-        // List_inArraySlots list
-      // ) {
-    // }
+    public static List_inArraySlots finites(
+        List_inArraySlots list
+      ) {
+	List_inArraySlots newList = new List_inArraySlots();
+	for (int i = 0; i < list.size(); i++){
+	    Object ele = list.get(i);
+	    if (ele instanceof Double)
+		if (!(((Double)ele).isInfinite()))
+		    newList.add(ele);
+	}
+	return newList;
+    }
 }
