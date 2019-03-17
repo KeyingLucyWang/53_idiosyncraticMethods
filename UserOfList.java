@@ -66,14 +66,26 @@ public class UserOfList {
 	list.add(1e4);
 	list.add(Double.NEGATIVE_INFINITY);
 	
-        // test mixed list of pi's template
-        System.out.println( "test mixed list of pi's");
-        System.out.println( list);
-	System.out.println(Accumulator.catElementsStartingWith( list, "pi"));
+        System.out.println("the sample list: "
+          + list.size() + " elements:" + System.lineSeparator()
+          + list                       + System.lineSeparator()
+          );
 
-	//test finites doubles
-	System.out.println( "test finites");
-        System.out.println( list);
-	System.out.println(Accumulator.finites( list));
+        // pi-prefixed phrases
+        System.out.println(
+            "pi-prefixed phrases: "
+          + Accumulator.catElementsStartingWith( list, "pi")
+          + System.lineSeparator());
+
+        // list of finite Doubles
+        List_inArraySlots numbers = Accumulator.finites( list);
+        System.out.println( "list of finite Doubles: "
+           + numbers.size() + " elements:" + System.lineSeparator()
+           + numbers
+           + System.lineSeparator());
+
+        // // test ?? template
+        // System.out.println( "test ??");
+        // System.out.println( list + System.lineSeparator());
     }
 }
